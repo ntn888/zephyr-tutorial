@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Index</a></li><li class="chapter-item expanded affix "><a href="../../docs/Introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../docs/Contributions.html">Contribution guide</a></li><li class="chapter-item expanded affix "><a href="../../docs/Prerequisites.html">Prerequisites</a></li><li class="chapter-item expanded affix "><li class="part-title">Lesson 1: Zephyr Setup</li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/mac-os.html"><strong aria-hidden="true">1.1.</strong> Installation MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/windows.html"><strong aria-hidden="true">1.2.</strong> Installation Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/linux.html"><strong aria-hidden="true">1.3.</strong> Installation Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/setup.html"><strong aria-hidden="true">2.</strong> Workspace Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/mac-os.html"><strong aria-hidden="true">2.1.</strong> Workspace Setup MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/windows.html"><strong aria-hidden="true">2.2.</strong> Workspace Setup Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/linux.html"><strong aria-hidden="true">2.3.</strong> Workspace Setup Linux</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 2: Introduction</li><li class="chapter-item expanded "><a href="../../docs/introduction/rtos-basics.html"><strong aria-hidden="true">3.</strong> RTOS basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/introduction/zephyr-structure.html"><strong aria-hidden="true">3.1.</strong> Zephyr basics</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 3: Threads</li><li class="chapter-item expanded "><a href="../../docs/threads/introduction.html"><strong aria-hidden="true">4.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/threads/commands.html"><strong aria-hidden="true">4.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/threads/kconfig.html"><strong aria-hidden="true">4.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/threads/exercise.html"><strong aria-hidden="true">4.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 4: GPIO</li><li class="chapter-item expanded "><a href="../../docs/gpio/introduction.html"><strong aria-hidden="true">5.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/gpio/commands.html"><strong aria-hidden="true">5.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/kconfig.html"><strong aria-hidden="true">5.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/exercise.html"><strong aria-hidden="true">5.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 5: Scheduling</li><li class="chapter-item expanded "><a href="../../docs/scheduling/introduction.html"><strong aria-hidden="true">6.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/scheduling/commands.html"><strong aria-hidden="true">6.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/kconfig.html"><strong aria-hidden="true">6.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/exercise.html"><strong aria-hidden="true">6.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 6: Debugging</li><li class="chapter-item expanded "><a href="../../docs/debugging/introduction.html"><strong aria-hidden="true">7.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/debugging/commands.html"><strong aria-hidden="true">7.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/kconfig.html"><strong aria-hidden="true">7.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 7: Interrupts</li><li class="chapter-item expanded "><a href="../../docs/interrupts/introduction.html"><strong aria-hidden="true">8.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/interrupts/commands.html"><strong aria-hidden="true">8.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/kconfig.html"><strong aria-hidden="true">8.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/exercise.html"><strong aria-hidden="true">8.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 8: Mutexes</li><li class="chapter-item expanded "><a href="../../docs/lesson08/introduction.html"><strong aria-hidden="true">9.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson08/commands.html"><strong aria-hidden="true">9.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/kconfig.html"><strong aria-hidden="true">9.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/exercise.html"><strong aria-hidden="true">9.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 9: Semaphores</li><li class="chapter-item expanded "><a href="../../docs/lesson09/introduction.html"><strong aria-hidden="true">10.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson09/commands.html"><strong aria-hidden="true">10.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/kconfig.html"><strong aria-hidden="true">10.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/exercise.html"><strong aria-hidden="true">10.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 10: Logging</li><li class="chapter-item expanded "><a href="../../docs/logging/introduction.html"><strong aria-hidden="true">11.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/logging/commands.html"><strong aria-hidden="true">11.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/logging/kconfig.html"><strong aria-hidden="true">11.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/logging/exercise.html"><strong aria-hidden="true">11.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 11: Networking</li><li class="chapter-item expanded "><a href="../../docs/networking/introduction.html"><strong aria-hidden="true">12.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/networking/commands.html"><strong aria-hidden="true">12.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/networking/kconfig.html"><strong aria-hidden="true">12.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/networking/exercise.html"><strong aria-hidden="true">12.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 12: Timers</li><li class="chapter-item expanded "><a href="../../docs/timers/introduction.html" class="active"><strong aria-hidden="true">13.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/timers/commands.html"><strong aria-hidden="true">13.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/timers/kconfig.html"><strong aria-hidden="true">13.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/timers/exercise.html"><strong aria-hidden="true">13.3.</strong> Exercise</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><em>What is a timer?</em></p>
+<p>A timer is a kernel object that measures the passage of time using the kernel's system clock. When a timer's specified time limit is reached it can perform an application-defined action, or it can simply record the expiration and wait for the application to read its status.</p>
+<p>Any number of timer can be defined (limited only by available RAM). Each timer is referenced by its memory address.</p>
+<p>A timer has the following key priorities:</p>
+<ul>
+<li>A duration specifying the time interval before the timer expires for the first time. This is a k_timeout_t value that may be initialized via different units.</li>
+<li>A period specifying the time interval between all timer expirations after the first one, also a k_timeout_t. It must be non-negative. A period of K_NO_WAIT (i.e. zero) or K_FOREVER means that the times is a one shot timer that stops after a single expiration. (For example then, if a timer is started with a duration of 200 and a period of 75, it will first expire after 200ms and then every 75ms after that.)</li>
+<li>An expiry function that is executed each time the timer expires. The function is executed by the system clock interrupt handler. If no expiry function is required a NULL function can be specified.</li>
+<li>A stop function that is executed if the timer is stopped prematurely while running. The function is executed by the thread that stops the timer. If no stop function is required a NULL function can be specified.</li>
+<li>A status value that indicates how many times the timer has expired since the status value was last read. </li>
+</ul>
+<p>A timer must be initialized before it can be used. This specifies its expiry function and stop function values, sets the timer's status to zero, and puts the timer into the stopped state.</p>
+<p>A timer is started by specifying a duration and a period. The timer's status is reset to zero, then the timer enters the running state and begins counting down towards expiry.</p>
+<p>Note that the timer's duration and period parameters specify minimum delays that will elapse. Because of internal system timer precision (and potentially runtime interactions like interrupt delay) it is possible that more time may have passed as measured by reads from the relevant system time APIs. But at least this much time is guaranteed to have elapsed.</p>
+<p>When a running timer expires its status is incremented and the timer executes its expiry function, if one exists; if a thread is waiting on the timer, it is unblocked. If the timer's period is zero the timer enters the stopped state; otherwise the timer restarts with a new duration equal to its period. </p>
+<p>A running timer can be stopped in mid-countdown, if desired. The timer's status is left unchanged, then the timer enters the stopped state and executes its stop function, if one exists. If a thread is waiting on the timer, it is unblocked. Attempting to stop a non-running timer is permitted, but has no effect on the timer since it is already stopped. </p>
+<p>A running timer can be restarted in mid-countdown, if desired. The timer's status is reset to zero, then the timer begins counting down using the new duration and period values specified by the caller. If a thread is waiting on the timer, it continues waiting. </p>
+<p>A timer's status can be read directly at any time to determine how many times the timer has expired since its status was last read. Reading a timer's status resets its value to zero. The amount of time remaining before a timer expires can also be read; a value of zero indicates that the timer has stopped.</p>
+<p>A thread may read a timer's status indirectly by synchronizing with the timer. This blocks the thread until the timer's status is non-zero (indicating that it has expired at least once) or the timer is stopped; if the timer status is already non-zero or the timer is already stopped the thread continues with waiting. The synchronization operation returns the timer's status and resets it to zero.</p>
+<p>Note: Only a single user should examine the status of any given timer, since reading the status (directly or indirectly) changes its value. Similarly, only a single thread at a time should synchronize with a given timer. ISRs are not permitted to synchronize with timers, since ISRs are not allowed to block. </p>
+<p><em>How to define a timer?</em></p>
+<p>A timer is defined using a variable of type k_timer. It must then be initialized by calling k_timer_init().</p>
+<p>The following code defines and initializes a timer.</p>
+<pre><code class="language-c">struct k_timer my_timer;
+extern void my_expiry_function(struct k_timer *timer_id);
+
+k_timer_init(&amp;my_timer, my_expiry_function, NULL);
+</code></pre>
+<p>Alternatively, a timer can be defined and initialized at compile time by calling K_TIMER_DEFINE.</p>
+<p>The following code has the same effect as the code segment above.</p>
+<pre><code class="language-c">K_TIMER_DEFINE(my_timer, my_expiry_function, NULL);
+</code></pre>
+<p>The following code uses a timer to perform a non-trivial action on a periodic basis. Since the required work cannot be done at interrupt level, the timer's expiry function submits a work item to the system workqueue, whose thread performs the work.</p>
+<pre><code class="language-c">void my_work_handler(struct k_work *work)
+{
+    /* do the processing that needs to be done periodically */
+    ...
+}
+
+K_WORK_DEFINE(my_work, my_work_handler);
+
+void my_timer_handler(struct k_timer *dummy)
+{
+    k_work_submit(&amp;my_work);
+}
+
+K_TIMER_DEFINE(my_timer, my_timer_handler, NULL);
+
+...
+
+/* start periodic timer that expires once every second */
+k_timer_start(&amp;my_timer, K_SECONDS(1), K_SECONDS(1));
+</code></pre>
+<p>The following code reads a timer's status directly to determine if the timer has expired or not.</p>
+<pre><code class="language-c">K_TIMER_DEFINE(my_status_timer, NULL, NULL);
+
+...
+
+/* start one shot timer that expires after 200 ms */
+k_timer_start(&amp;my_status_timer, K_MSEC(200), K_NO_WAIT);
+
+/* do work */
+...
+
+/* check timer status */
+if (k_timer_status_get(&amp;my_status_timer) &gt; 0) {
+    /* timer has expired */
+} else if (k_timer_remaining_get(&amp;my_status_timer) == 0) {
+    /* timer was stopped (by someone else) before expiring */
+} else {
+    /* timer is still running */
+}
+</code></pre>
+<p>The following code performs timer status synchronization to allow a thread to do useful work while ensuring that a pair of protocol operations are seperated by the specified time interval.</p>
+<pre><code class="language-c">K_TIMER_DEFINE(my_sync_timer, NULL, NULL);
+
+...
+
+/* do first protocol operation */
+...
+
+/* start one shot timer that expires after 500 ms */
+k_timer_start(&amp;my_sync_timer, K_MSEC(500), K_NO_WAIT);
+
+/* do other work */
+...
+
+/* ensure timer has expired (waiting for expiry, if necessary) */
+k_timer_status_sync(&amp;my_sync_timer);
+
+/* do second protocol operation */
+...
+</code></pre>
+<p><em>When to use a timer?</em></p>
+<p>Use a timer to initiate an asynchronous operation after a specified amount of time.</p>
+<p>Use a timer to determine whether or not a specified amount of time has elapsed. In particular, timers should be used when higher precision and/or unit control is required than that afforded by the simpler k_sleep() and k_usleep() calls.</p>
+<p>Use a timer to perform other work while carrying out operations involving time limits.</p>
+<p>Note: If a thread needs to measure the time required to perform an operation it can read the system clock or the hardware clock directly, rather than using a timer. </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../docs/networking/exercise.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../docs/timers/commands.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../docs/networking/exercise.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../docs/timers/commands.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

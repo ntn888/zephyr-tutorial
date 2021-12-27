@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Index</a></li><li class="chapter-item expanded affix "><a href="../../docs/Introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../docs/Contributions.html">Contribution guide</a></li><li class="chapter-item expanded affix "><a href="../../docs/Prerequisites.html">Prerequisites</a></li><li class="chapter-item expanded affix "><li class="part-title">Lesson 1: Zephyr Setup</li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/mac-os.html"><strong aria-hidden="true">1.1.</strong> Installation MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/windows.html"><strong aria-hidden="true">1.2.</strong> Installation Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/linux.html"><strong aria-hidden="true">1.3.</strong> Installation Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/setup.html"><strong aria-hidden="true">2.</strong> Workspace Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/mac-os.html"><strong aria-hidden="true">2.1.</strong> Workspace Setup MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/windows.html"><strong aria-hidden="true">2.2.</strong> Workspace Setup Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/linux.html"><strong aria-hidden="true">2.3.</strong> Workspace Setup Linux</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 2: Introduction</li><li class="chapter-item expanded "><a href="../../docs/introduction/rtos-basics.html"><strong aria-hidden="true">3.</strong> RTOS basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/introduction/zephyr-structure.html"><strong aria-hidden="true">3.1.</strong> Zephyr basics</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 3: Threads</li><li class="chapter-item expanded "><a href="../../docs/threads/introduction.html"><strong aria-hidden="true">4.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/threads/commands.html"><strong aria-hidden="true">4.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/threads/kconfig.html"><strong aria-hidden="true">4.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/threads/exercise.html"><strong aria-hidden="true">4.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 4: GPIO</li><li class="chapter-item expanded "><a href="../../docs/gpio/introduction.html"><strong aria-hidden="true">5.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/gpio/commands.html"><strong aria-hidden="true">5.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/kconfig.html"><strong aria-hidden="true">5.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/exercise.html"><strong aria-hidden="true">5.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 5: Scheduling</li><li class="chapter-item expanded "><a href="../../docs/scheduling/introduction.html"><strong aria-hidden="true">6.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/scheduling/commands.html"><strong aria-hidden="true">6.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/kconfig.html"><strong aria-hidden="true">6.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/exercise.html"><strong aria-hidden="true">6.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 6: Debugging</li><li class="chapter-item expanded "><a href="../../docs/debugging/introduction.html"><strong aria-hidden="true">7.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/debugging/commands.html"><strong aria-hidden="true">7.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/kconfig.html"><strong aria-hidden="true">7.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 7: Interrupts</li><li class="chapter-item expanded "><a href="../../docs/interrupts/introduction.html" class="active"><strong aria-hidden="true">8.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/interrupts/commands.html"><strong aria-hidden="true">8.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/kconfig.html"><strong aria-hidden="true">8.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/exercise.html"><strong aria-hidden="true">8.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 8: Mutexes</li><li class="chapter-item expanded "><a href="../../docs/lesson08/introduction.html"><strong aria-hidden="true">9.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson08/commands.html"><strong aria-hidden="true">9.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/kconfig.html"><strong aria-hidden="true">9.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/exercise.html"><strong aria-hidden="true">9.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 9: Semaphores</li><li class="chapter-item expanded "><a href="../../docs/lesson09/introduction.html"><strong aria-hidden="true">10.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson09/commands.html"><strong aria-hidden="true">10.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/kconfig.html"><strong aria-hidden="true">10.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/exercise.html"><strong aria-hidden="true">10.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 10: Logging</li><li class="chapter-item expanded "><a href="../../docs/logging/introduction.html"><strong aria-hidden="true">11.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/logging/commands.html"><strong aria-hidden="true">11.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/logging/kconfig.html"><strong aria-hidden="true">11.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/logging/exercise.html"><strong aria-hidden="true">11.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 11: Networking</li><li class="chapter-item expanded "><a href="../../docs/networking/introduction.html"><strong aria-hidden="true">12.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/networking/commands.html"><strong aria-hidden="true">12.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/networking/kconfig.html"><strong aria-hidden="true">12.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/networking/exercise.html"><strong aria-hidden="true">12.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 12: Timers</li><li class="chapter-item expanded "><a href="../../docs/timers/introduction.html"><strong aria-hidden="true">13.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/timers/commands.html"><strong aria-hidden="true">13.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/timers/kconfig.html"><strong aria-hidden="true">13.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/timers/exercise.html"><strong aria-hidden="true">13.3.</strong> Exercise</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><em>What is an interrupt?</em></p>
+<p>An interrupt service routine (ISR) is a function that executes asynchronously in response to a hardware or software interrupt. An ISR normally preempts the execution of the current thread, allowing the response to occur with very low overhead. Thread execution resumes only once all ISR work has been completed.</p>
+<p>An ISR has the following key properties:</p>
+<ul>
+<li>An interrupt request (IRQ) signal that triggers the ISR</li>
+<li>A priority level associated with the IRQ</li>
+<li>An interrupt handler function that is invoked to handle the interrupt</li>
+<li>An argument value that is passed to that function</li>
+</ul>
+<p>An interrupt descriptor table (IDT) or a vector table is used to associate a given interrupt source with a given ISR. Only a single ISR can be associated with a specific IRQ at any given time.</p>
+<p>Multiple ISRs can utilize the same function to process interrupts, allowing a single function to service a device that generates multiple types of interrupts or to service multiple devices (usually of the same type). The argument value passed to an ISR's function allows the function to determine which interrupt has been signaled. </p>
+<p>The kernel provides a default ISR for all unused IDT entries. This ISR generates a fatal system error if an unexpected interrupt is signaled.</p>
+<p>The kernel supports interrupt nesting. This allows an ISR to be preempted in mid-execution if a higher priority interrupt is signaled. The lower priority ISR resumes execution once the higher priority ISR has completed its processing.</p>
+<p>An ISR's interrupt handler function executes in the kernel's interrupt context. This context has its own dedicated stack area. The size of the interrupt context stack must be capable of handling the execution of multiple concurrent ISRs if interrupt nesting support is enabled. </p>
+<p>Important: Many kernel APIs can be used only by threads, and not by ISRs. In cases where a routine may be invoked by both threads and ISRs the kernel provides the k_is_in_isr() function to allow the routine to alter its behavior depending on whether it is executing as part of a thread or as part of an ISR.</p>
+<p><em>How to define a regular interrupt?</em></p>
+<p>An ISR is defined at run-time by calling IRQ_CONNECT. It must then be enabled by calling irq_enable().</p>
+<p>Important: IRQ_CONNECT() is not a C function and does some inline assembly magic behind the scenes. All its arguments must be known at build time. Drivers that have multiple instances may need to define per-instance config functions to configure each instance of the interrupt.</p>
+<p>The following code defines and enables an ISR.</p>
+<pre><code class="language-c">#define MY_DEV_IRQ  24       /* device uses IRQ 24 */
+#define MY_DEV_PRIO  2       /* device uses interrupt priority 2 */
+/* argument passed to my_isr(), in this case a pointer to the device */
+#define MY_ISR_ARG  DEVICE_GET(my_device)
+#define MY_IRQ_FLAGS 0       /* IRQ flags. Unused on non-x86 */
+
+void my_isr(void *arg)
+{
+   ... /* ISR code */
+}
+
+void my_isr_installer(void)
+{
+   ...
+   IRQ_CONNECT(MY_DEV_IRQ, MY_DEV_PRIO, my_isr, MY_ISR_ARG, MY_IRQ_FLAGS);
+   irq_enable(MY_DEV_IRQ);
+   ...
+}
+</code></pre>
+<p><em>How to define a 'direct' ISR?</em></p>
+<p>Regular Zephyr interrupts introduce some overhead which may be unacceptable for some low-latency use-cases. Specifically:</p>
+<ul>
+<li>The argument to the ISR is retrieved and passed to the ISR</li>
+<li>If power management is enabled and the system was idle, all the hardware will be resumed from low-power state before the ISR is executed, which can be very time-consuming</li>
+<li>Although some architectures will do this in hardware, other architectures need to switch to the interrupt stack in code</li>
+<li>After the interrupt is serviced, the OS then performs some logic to potentially make a scheduling decision</li>
+</ul>
+<p>Zephyr supports so-called 'direct' interrupts, which are installed via IRQ_DIRECT_CONNECT. These direct interrupts have some special implementation requirements and a reduced feature set; see the definition of IRQ_DIRECT_CONNECT for details.</p>
+<p>The following code demonstrates a direct ISR:</p>
+<pre><code class="language-c">#define MY_DEV_IRQ  24       /* device uses IRQ 24 */
+#define MY_DEV_PRIO  2       /* device uses interrupt priority 2 */
+/* argument passed to my_isr(), in this case a pointer to the device */
+#define MY_IRQ_FLAGS 0       /* IRQ flags. Unused on non-x86 */
+
+ISR_DIRECT_DECLARE(my_isr)
+{
+   do_stuff();
+   ISR_DIRECT_PM(); /* PM done after servicing interrupt for best latency */
+   return 1; /* We should check if scheduling decision should be made */
+}
+
+void my_isr_installer(void)
+{
+   ...
+   IRQ_DIRECT_CONNECT(MY_DEV_IRQ, MY_DEV_PRIO, my_isr, MY_IRQ_FLAGS);
+   irq_enable(MY_DEV_IRQ);
+   ...
+}
+</code></pre>
+<p><em>How to disable interrupts?</em></p>
+<p>In certain situations it may be necessary for the current thread to prevent ISRs from executing while it is performing time-sensitive or critical section operations.</p>
+<p>A thread may temporarily prevent all IRQ handling in the system using an IRQ lock. This lock can be applied even when it is already in effect, so routines can use it without having to know if it is already in effect. The thread must unlock its IRQ lock the same number of times it was locked before interrupts can be once again processed by the kernel while the thread is running.</p>
+<p>Important: The IRQ lock is thread-specific. if thread A locks out interrupts then performs an operation that allows thread B to run (e.g. giving a semaphore or sleeping for N milliseconds), the thread's IRQ lock no longer applies once thread A is swapped out. This means that interrupts can be processed while thread B is running unless thread B has also locked out interrupts using its own IRQ lock. </p>
+<p>When thread A eventually becomes the current thread once again, the kernel re-establishes thread A's IRQ lock. This ensures thread A won't be interrupted until it has explicitly unlocked its IRQ lock.</p>
+<p>Alternatively, a thread may temporarily disable a specific IRQ. The IRQ must be subsequently enabled to permit the ISR to execute.</p>
+<p>Important: Disabling an IRQ prevent all threads in the system from being preempted by the associated ISR, not just the thread that disabled the IRQ.</p>
+<p><em>When to use an interrupt?</em></p>
+<p>Use a regular or direct ISR to perform interrupt processing that requires a very rapid response, and can be done quickly without blocking.</p>
+<p>Note: Interrupt processing that is time consuming, or involves blocking, should be handed off to a thread. See <a href="https://docs.zephyrproject.org/1.9.0/kernel/other/interrupts.html#offloading-isr-work">Offloading ISR Work</a> for a description of various techniques that can be used in an application.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../docs/debugging/exercise.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../docs/interrupts/commands.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../docs/debugging/exercise.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../docs/interrupts/commands.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

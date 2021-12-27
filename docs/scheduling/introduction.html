@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Index</a></li><li class="chapter-item expanded affix "><a href="../../docs/Introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../docs/Contributions.html">Contribution guide</a></li><li class="chapter-item expanded affix "><a href="../../docs/Prerequisites.html">Prerequisites</a></li><li class="chapter-item expanded affix "><li class="part-title">Lesson 1: Zephyr Setup</li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/mac-os.html"><strong aria-hidden="true">1.1.</strong> Installation MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/windows.html"><strong aria-hidden="true">1.2.</strong> Installation Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/linux.html"><strong aria-hidden="true">1.3.</strong> Installation Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/setup.html"><strong aria-hidden="true">2.</strong> Workspace Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/mac-os.html"><strong aria-hidden="true">2.1.</strong> Workspace Setup MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/windows.html"><strong aria-hidden="true">2.2.</strong> Workspace Setup Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/linux.html"><strong aria-hidden="true">2.3.</strong> Workspace Setup Linux</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 2: Introduction</li><li class="chapter-item expanded "><a href="../../docs/introduction/rtos-basics.html"><strong aria-hidden="true">3.</strong> RTOS basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/introduction/zephyr-structure.html"><strong aria-hidden="true">3.1.</strong> Zephyr basics</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 3: Threads</li><li class="chapter-item expanded "><a href="../../docs/threads/introduction.html"><strong aria-hidden="true">4.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/threads/commands.html"><strong aria-hidden="true">4.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/threads/kconfig.html"><strong aria-hidden="true">4.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/threads/exercise.html"><strong aria-hidden="true">4.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 4: GPIO</li><li class="chapter-item expanded "><a href="../../docs/gpio/introduction.html"><strong aria-hidden="true">5.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/gpio/commands.html"><strong aria-hidden="true">5.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/kconfig.html"><strong aria-hidden="true">5.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/exercise.html"><strong aria-hidden="true">5.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 5: Scheduling</li><li class="chapter-item expanded "><a href="../../docs/scheduling/introduction.html" class="active"><strong aria-hidden="true">6.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/scheduling/commands.html"><strong aria-hidden="true">6.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/kconfig.html"><strong aria-hidden="true">6.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/exercise.html"><strong aria-hidden="true">6.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 6: Debugging</li><li class="chapter-item expanded "><a href="../../docs/debugging/introduction.html"><strong aria-hidden="true">7.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/debugging/commands.html"><strong aria-hidden="true">7.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/kconfig.html"><strong aria-hidden="true">7.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 7: Interrupts</li><li class="chapter-item expanded "><a href="../../docs/interrupts/introduction.html"><strong aria-hidden="true">8.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/interrupts/commands.html"><strong aria-hidden="true">8.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/kconfig.html"><strong aria-hidden="true">8.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/exercise.html"><strong aria-hidden="true">8.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 8: Mutexes</li><li class="chapter-item expanded "><a href="../../docs/lesson08/introduction.html"><strong aria-hidden="true">9.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson08/commands.html"><strong aria-hidden="true">9.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/kconfig.html"><strong aria-hidden="true">9.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/exercise.html"><strong aria-hidden="true">9.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 9: Semaphores</li><li class="chapter-item expanded "><a href="../../docs/lesson09/introduction.html"><strong aria-hidden="true">10.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson09/commands.html"><strong aria-hidden="true">10.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/kconfig.html"><strong aria-hidden="true">10.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/exercise.html"><strong aria-hidden="true">10.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 10: Logging</li><li class="chapter-item expanded "><a href="../../docs/logging/introduction.html"><strong aria-hidden="true">11.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/logging/commands.html"><strong aria-hidden="true">11.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/logging/kconfig.html"><strong aria-hidden="true">11.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/logging/exercise.html"><strong aria-hidden="true">11.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 11: Networking</li><li class="chapter-item expanded "><a href="../../docs/networking/introduction.html"><strong aria-hidden="true">12.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/networking/commands.html"><strong aria-hidden="true">12.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/networking/kconfig.html"><strong aria-hidden="true">12.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/networking/exercise.html"><strong aria-hidden="true">12.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 12: Timers</li><li class="chapter-item expanded "><a href="../../docs/timers/introduction.html"><strong aria-hidden="true">13.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/timers/commands.html"><strong aria-hidden="true">13.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/timers/kconfig.html"><strong aria-hidden="true">13.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/timers/exercise.html"><strong aria-hidden="true">13.3.</strong> Exercise</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p><em>What is &quot;scheduling&quot;?</em></p>
+<p>The scheduler determines which thread is allowed to execute at any point in time; this thread is known as the current thread.</p>
+<p>There are various points in time when the scheduler is given an opportunity to change the identity of the current thread. These points are called reschedule points. Some potential reschedule points are:</p>
+<ul>
+<li>transition of a thread from running state to a suspended or waiting state, for example by k_sem_take() or k_sleep().</li>
+<li>transition of a thread to the ready state, for example by k_sem_give() or k_thread_start()</li>
+<li>return to thread context after processing an interrupt</li>
+<li>when a running thread invokes k_yield()</li>
+</ul>
+<p>A thread sleeps when it volutarily initiates an operation that transitions itself to a suspended or waiting state.</p>
+<p>Whenever the scheduler changes the identity of the current thread, or when execution of the current thread is replaced by an ISR, the kernel first saves the current thread's CPU register values. These register values get restored when the thread later resumes execution.</p>
+<h2 id="scheduler"><a class="header" href="#scheduler">Scheduler</a></h2>
+<p><em>How does the scheduler work?</em></p>
+<p>The kernel's scheduler selects the highest priority ready thread to be the current thread. When multiple ready threads of the same priority exist, the scheduler chooses the one that has been waiting the longest. </p>
+<p>Note: execution of ISRs takes precedence over thread execution. Unless interrupts have been masked, the current thread can be replaced by an ISR at any time.</p>
+<p>The kernel can be built with one of several choices for the ready queue implementation. The choice is a trade-off between:</p>
+<ul>
+<li>code size</li>
+<li>constant factor runtime overhead</li>
+<li>performance scaling when many threads are involved</li>
+</ul>
+<p>Your Kconfig-file (<code>prj.conf</code>) should contain one of the following (or it will default to simple linked-list).</p>
+<p>The queue types: </p>
+<ul>
+<li>Simple linked-list ready queue (<code>CONFIG_SCHED_DUMB</code>)
+<ul>
+<li>simple unordered list</li>
+<li>very fast constant time performance for single threads</li>
+<li>very low code size</li>
+<li>useful for systems with:
+<ul>
+<li>constrained code size</li>
+<li>small number of threads (&lt;=3) at any given time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Red/black tree ready queue (<code>CONFIG_SCHED_SCALABLE</code>)
+<ul>
+<li>red/black tree (<a href="https://en.wikipedia.org/wiki/Red%E2%80%93black_tree">wiki</a>)</li>
+<li>slower constant time insertion and removal overhead</li>
+<li>requires extra 2Kb code</li>
+<li>scales cleanly and quickly into many thousands of threads</li>
+<li>Useful for systems with:
+<ul>
+<li>many concurrent runnable threads (&gt;20 or so)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Traditional multi-queue ready queue (<code>CONFIG_SCHED_MULTIQ</code>)
+<ul>
+<li>classic array of lists, one per priority (max 32 priorities)</li>
+<li>tine code size overhead vs. the &quot;dumb&quot; scheduler</li>
+<li>runs in 0(1) time with very low constant factor</li>
+<li>requires fairly large RAM budget to store list heads</li>
+<li>incompatible with <a href="https://www.geeksforgeeks.org/deadline-scheduler-in-operating-system/">deadline scheduling</a> and <a href="https://cs.uwaterloo.ca/%7Ebrecht/servers/apic/SMP-affinity.txt">SMP affinity</a></li>
+<li>systems with small # of threads (but usually DUMB is good enough)</li>
+</ul>
+</li>
+<li>Scalable wait_q implementation (<code>CONFIG_WAITQ_SCALABLE</code>)</li>
+<li>Simple linked-list wait_q (<code>CONFIG_WAITQ_DUMB</code>)</li>
+</ul>
+<h2 id="thread-priorities"><a class="header" href="#thread-priorities">Thread priorities</a></h2>
+<p><em>How do thread priorities work?</em></p>
+<p>A thread's priority is an integer value, and can be either negative or non-negative. Numerically lower priorities take precedence over higher values (-5&gt;6).</p>
+<p>The scheduler distinguishes between two classes of threads, based on each thread's priority. </p>
+<ul>
+<li>A cooperative thread has a negative priority value. Once it becomes the current thread, a cooperative thread remains the current thread until it performs an action that makes it unready.</li>
+<li>A preemptible thread has a non-negative priority value. Once it becomes the current thread, a preemptible thread may be supplanted at any time if a cooperative thread, or a preemptible thread of higher or equal priority, becomes ready.</li>
+</ul>
+<p>A thread's initial priority value can be altered up or down after the thread has been started. Thus it is possible for a preemptible thread to become a cooperative thread, and vice versa.</p>
+<p>The kernel supports a virtually unlimited number of thread priority levels. The configuration options CONFIG_NUM_COOP_PRIORITIES and CONFIG_NUM_PREEMPT_PRIORITIES specify the number of priority levels for each class of thread, resulting in the following usable priority ranges:</p>
+<ul>
+<li>cooperative threads: (-CONFIG_NUM_COOP_PRIORITIES) to -1</li>
+<li>preemptive threads: 0 to (CONFIG_NUM_PREEMPT_PRIOTIES-1) </li>
+</ul>
+<h2 id="cooperative-time-slicing"><a class="header" href="#cooperative-time-slicing">Cooperative Time Slicing</a></h2>
+<p><em>What is cooperative time slicing?</em>
+Once a cooperative thread becomes the current thread, it remains the current thread until it performs an action that makes it unready. Consequently, if a cooperative thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of higher priority.</p>
+<p><img src="/images/scheduling/cooperative.png" alt="cooperative" /></p>
+<p>To overcome such problems, a cooperative thread can voluntarily relinquish the CPU from time to time to permit other threads to execute. A thread can relinquish the CPU in two ways:</p>
+<ul>
+<li>Calling k_yield() puts the thread at the back of the scheduler's prioritized list of ready threads, and then invokes the scheduler. All ready threads whose priority is higher or equal to that of the yielding thread are then allowed to execute before the yielding thread is rescheduled. If no such threads exist, the scheduler immediately reschedules the yielding thread without context switching. </li>
+<li>Calling k_sleep() makes the thread unready for a specified time period. Ready threads of <em>all</em> priorities are then allowed to execute; however, there is no guarantee that threads whose priority is lower than that of the sleeping thread will actually be scheduled before the sleeping thread becomes ready once again.</li>
+</ul>
+<h2 id="preemptive-time-slicing"><a class="header" href="#preemptive-time-slicing">Preemptive Time Slicing</a></h2>
+<p><em>What is preemptive time slicing?</em></p>
+<p>Once a preemptive thread becomes the current thread, it remains the current thread until a higher priority thread becomes ready, or until the thread performs an action that makes it unready. Consequently, if a preemptive thread performs lengthy computations, it may cause an unacceptable delay in the scheduling of other threads, including those of equal priority. </p>
+<p><img src="/images/scheduling/preemptive.png" alt="preemptive" /></p>
+<p>To overcome such problems, a preemptive thread can perform cooperative time slicing (as described above), or the scheduler's time slicing capability can be used to allow other threads of the same priority to execute.</p>
+<p><img src="/images/scheduling/timeslicing.png" alt="timeslicing" /></p>
+<p>The scheduler divides time into a series of time slices, where slices are measured in system clock ticks. The time slice size is configurable, but this size can be changed while the application is running.</p>
+<p>At the end of every time slice, the scheduler checks to see if the current thread is preemptible and, if so, implicitly invokes k_yield() on behalf of the thread. This gives other ready threads of the same priority the opportunity to execute before the current thread is scheduled again. If no threads of equal priority are ready, the current thread remains.</p>
+<p>Threads with a priority higher than the specified limit are exempt from preemptive time slicing, and are never preempted by a thread of equal priority. This allows an application to use preemptive time slicing only when dealing with lower priority threads that are less time-sensitive.</p>
+<p>Note: the kernel's time slicing algorithm does not ensure that a set of equal-priority threads receive an equitable amount of CPU time, since it does not measure the amount of time a thread actually gets to execute. However, the algorithm does ensure that a thread never executes for longer than a single time slice without being required to yield.</p>
+<p>A preemtible thread that does not wish to be preempted while performing a critical operation can instruct the scheduler to temporarily treat it as a cooperative thread by calling k_sched_lock(). This prevents other threads from interfering while the critical operation is being performed.</p>
+<p>Once the critical operation is complete the preemptible thread must call k_sched_unlock() to restore its normal, preemptible status.</p>
+<p>If a thread calls k_sched_lock() and subsequently performs an action that makes it unready, the scheduler will switch the locking thread out and allow other threads to execute. When the locking thread again becomes the current thread, its non-preemptible status is maintained.</p>
+<p>Note: Locking out the scheduler is a more efficient way for a preemptible thread to prevent preemption than changing its priority level to a negative value.</p>
+<h2 id="varia"><a class="header" href="#varia">Varia</a></h2>
+<p><em>What is thread sleeping?</em>
+A thread can call k_sleep() to delay its processing for a specified time period. During the time the thread is sleeping the CPU is relinquished to allow other ready threads to execute. Once the specified delay has elapsed the thread becomes ready and is eligible to be scheduled once again.</p>
+<p>A sleeping thread can be woken up prematurely by another thread using k_wakeup(). This technique can sometimes be used to permit the secondary thread to signal the sleeping thread that something has occured without requiring the thread to define a kernel synchronization object, such as a semaphore. Waking up a thread that is not sleeping is allowed, but has no effect. </p>
+<p><em>What is busy waiting?</em>
+A thread can call k_busy_wait() to perform a busy wait that delays its processing for a specified time period without relinquishing the CPU to another ready thread.</p>
+<p>A busy wait is typically used instead of thread sleeping when the required delay is too short to warrant having the scheduler context switch from the current thread to another thread and then back again.</p>
+<p><em>Cooperative or preemptive?</em></p>
+<ul>
+<li>Device drivers and other performance-critical work -&gt; cooperative threads</li>
+<li>Use cooperative threads to implement mutual exclusion without the need for a kernel object, such as a mutex</li>
+<li>Use preemptive threads to give priority to time-sensitive processing over less time-sensitive processing</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../docs/gpio/exercise.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../docs/scheduling/commands.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../docs/gpio/exercise.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../docs/scheduling/commands.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

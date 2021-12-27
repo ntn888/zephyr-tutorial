@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>RTOS basics</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Index</a></li><li class="chapter-item expanded affix "><a href="../../docs/Introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../docs/Contributions.html">Contribution guide</a></li><li class="chapter-item expanded affix "><a href="../../docs/Prerequisites.html">Prerequisites</a></li><li class="chapter-item expanded affix "><li class="part-title">Lesson 1: Zephyr Setup</li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/mac-os.html"><strong aria-hidden="true">1.1.</strong> Installation MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/windows.html"><strong aria-hidden="true">1.2.</strong> Installation Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/install/linux.html"><strong aria-hidden="true">1.3.</strong> Installation Linux</a></li></ol></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/setup.html"><strong aria-hidden="true">2.</strong> Workspace Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/mac-os.html"><strong aria-hidden="true">2.1.</strong> Workspace Setup MacOS</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/windows.html"><strong aria-hidden="true">2.2.</strong> Workspace Setup Windows</a></li><li class="chapter-item expanded "><a href="../../docs/zephyr-setup/setup/linux.html"><strong aria-hidden="true">2.3.</strong> Workspace Setup Linux</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 2: Introduction</li><li class="chapter-item expanded "><a href="../../docs/introduction/rtos-basics.html" class="active"><strong aria-hidden="true">3.</strong> RTOS basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/introduction/zephyr-structure.html"><strong aria-hidden="true">3.1.</strong> Zephyr basics</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 3: Threads</li><li class="chapter-item expanded "><a href="../../docs/threads/introduction.html"><strong aria-hidden="true">4.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/threads/commands.html"><strong aria-hidden="true">4.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/threads/kconfig.html"><strong aria-hidden="true">4.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/threads/exercise.html"><strong aria-hidden="true">4.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 4: GPIO</li><li class="chapter-item expanded "><a href="../../docs/gpio/introduction.html"><strong aria-hidden="true">5.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/gpio/commands.html"><strong aria-hidden="true">5.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/kconfig.html"><strong aria-hidden="true">5.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/gpio/exercise.html"><strong aria-hidden="true">5.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 5: Scheduling</li><li class="chapter-item expanded "><a href="../../docs/scheduling/introduction.html"><strong aria-hidden="true">6.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/scheduling/commands.html"><strong aria-hidden="true">6.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/kconfig.html"><strong aria-hidden="true">6.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/scheduling/exercise.html"><strong aria-hidden="true">6.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 6: Debugging</li><li class="chapter-item expanded "><a href="../../docs/debugging/introduction.html"><strong aria-hidden="true">7.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/debugging/commands.html"><strong aria-hidden="true">7.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/kconfig.html"><strong aria-hidden="true">7.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/debugging/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 7: Interrupts</li><li class="chapter-item expanded "><a href="../../docs/interrupts/introduction.html"><strong aria-hidden="true">8.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/interrupts/commands.html"><strong aria-hidden="true">8.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/kconfig.html"><strong aria-hidden="true">8.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/interrupts/exercise.html"><strong aria-hidden="true">8.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 8: Mutexes</li><li class="chapter-item expanded "><a href="../../docs/lesson08/introduction.html"><strong aria-hidden="true">9.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson08/commands.html"><strong aria-hidden="true">9.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/kconfig.html"><strong aria-hidden="true">9.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson08/exercise.html"><strong aria-hidden="true">9.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 9: Semaphores</li><li class="chapter-item expanded "><a href="../../docs/lesson09/introduction.html"><strong aria-hidden="true">10.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/lesson09/commands.html"><strong aria-hidden="true">10.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/kconfig.html"><strong aria-hidden="true">10.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/lesson09/exercise.html"><strong aria-hidden="true">10.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 10: Logging</li><li class="chapter-item expanded "><a href="../../docs/logging/introduction.html"><strong aria-hidden="true">11.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/logging/commands.html"><strong aria-hidden="true">11.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/logging/kconfig.html"><strong aria-hidden="true">11.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/logging/exercise.html"><strong aria-hidden="true">11.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 11: Networking</li><li class="chapter-item expanded "><a href="../../docs/networking/introduction.html"><strong aria-hidden="true">12.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/networking/commands.html"><strong aria-hidden="true">12.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/networking/kconfig.html"><strong aria-hidden="true">12.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/networking/exercise.html"><strong aria-hidden="true">12.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Lesson 12: Timers</li><li class="chapter-item expanded "><a href="../../docs/timers/introduction.html"><strong aria-hidden="true">13.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../docs/timers/commands.html"><strong aria-hidden="true">13.1.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../../docs/timers/kconfig.html"><strong aria-hidden="true">13.2.</strong> Kconfig</a></li><li class="chapter-item expanded "><a href="../../docs/timers/exercise.html"><strong aria-hidden="true">13.3.</strong> Exercise</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="rtos-basics"><a class="header" href="#rtos-basics">RTOS basics</a></h2>
+<p><em>Why do I need an RTOS?</em></p>
+<p>An RTOS is rarely a requirement, however as you start to increase the functionality of your embedded applications, it becomes increasingly harder to do everything within one single main loop and some interrupt routines. Usually the next level of complexity is some kind of state machine, where the output of your electronic device changes depending on this (internal) state. This however only gets you so far. For example, what if you need to be able to operate multiple complex inputs and outputs simultanously? A good example could be an TCP/IP connection, over which you'll be receiving some kind of data which then has to be used to operate a robotic arm, control an electric motor, send out a signal... It quickly becomes clear that a new level of abstraction is required to not drown in the complexity that would be required to implement something like that. This is where an RTOS comes in.</p>
+<p>An RTOS is a suite of firmware that helps you build more complex apps, than would otherwise be feasible. It gives you the tools, the way you use those tools is however completely up to you! First and foremost it means having <strong>threads</strong>, this means that you'll be able to execute multiple tasks in parallel, neatly dividing them into their own area in memory. Then each RTOS provides varying levels of support for different protocols such as TCP/IP, Bluetooth, LoRaWan,... This makes your life easier, since now you won't have to study these protocols as in-depth. You'll get a series of API calls which should increase speed of development.</p>
+<p><em>What makes Zephyr different from other RTOS'es?</em></p>
+<p>As I haven't had the time to study other RTOS'es as in-depth I might be biased here. However from my point of view, studying Zephyr has the following benefits:</p>
+<ul>
+<li>Zephyr is supported by the Linux Foundation</li>
+<li>By learning Zephyr you'll automatically get a taste for the Linux kernel. Both show some overlap in the way they are implemented, for example: Kconfig and devicetrees are some of the concepts borrowed by Zephyr from Linux</li>
+<li>Zephyr is flexible: you can trade off footprint versus extra functionality (through Kconfig). If you don't know how this works don't worry, I'll explain this later.</li>
+<li>Zephyr supports a wide variety of different dev boards/SoCs. </li>
+<li>A more extensive lists of reasons can be found <a href="https://docs.zephyrproject.org/latest/introduction/index.html">here</a></li>
+</ul>
+<p><em>How does an RTOS work and what are some key concepts?</em> </p>
+<p>Ok, so now that I've hopefully convinced you of the <em>use</em> of an RTOS, let's start by taking a look at <em>how</em> this all works. The first and most fundamental part of an RTOS is the <strong>kernel</strong>. The kernel is responsible for scheduling CPU time for each particular task so that they <em>appear</em> to be happening simultanously. The particulars of how this scheduling algorithm (or also called: <strong>scheduler</strong>) works is not important for now. </p>
+<p>Each <strong>thread</strong> (or task) will use registers and memory as it executes. The whole of these processor registers and stack (memory) compromise the <strong>context</strong> of that particular thread. Once the RTOS decides to switch the thread and run something else, it will need to first <em>store</em> context away and then <em>load</em> in the context for the thread it wants to run next. This process is called <strong>context switching</strong>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../docs/zephyr-setup/setup/linux.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../docs/introduction/zephyr-structure.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../docs/zephyr-setup/setup/linux.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../docs/introduction/zephyr-structure.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
